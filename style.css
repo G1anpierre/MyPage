@@ -18,6 +18,11 @@ li {
 a {
     text-decoration: none;
     opacity: 0.75;
+    color: black;
+}
+
+p {
+    color: #909497;
 }
 
 a:hover {
@@ -25,17 +30,59 @@ a:hover {
 }
 
 a.btn {
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: bold;
+    border-radius: 4px;    
     text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    padding: .7rem 1.5rem;
+    background-color: greenyellow;
+}
 
+hr {
+    width: 25rem;
+    height: 0.3rem;
+    background-color: #229954;
+    border: 0;
+    margin-bottom: 5rem;
+}
+
+section h3.title {
+    text-transform: capitalize;
+    font: bold 2rem 'Open Sans', sans-serif;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+section.destinations p {
+    text-align: center;
+    max-width: 53%;
+    line-height: 1.5;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+section.features p {
+    text-align: center;
+    max-width: 53%;
+    line-height: 1.5;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Ojo a esta parte!!!!! */
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 header {
     display: flex;
     justify-content: space-around;
-    padding: .75rem;
+    padding: .70rem;
     border-bottom: .03rem solid black;
 }
 
@@ -63,16 +110,22 @@ header {
 
 .navigation {
     display: flex;
-    padding: 2rem;
+    padding: 1.4rem;
 }
 
 img {
+    height: 2rem;
+    width: 6rem;
+    
+}
+
+.navigation div:nth-last-of-type(1) {
     align-self: center;
     flex: 1;
     padding-left: 7rem;
 }
 
-.navigation div {
+.navigation div:nth-last-of-type(2) {
     flex: 1;
     display: flex;
     align-items: baseline;
@@ -84,8 +137,62 @@ img {
 }
 
 .navigation div a:nth-of-type(5) {
-    color: red;
+
     padding: .3rem .8rem;
-    border: .1rem solid gray;
+    border: .01rem solid gray;
     
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 8rem;
+}
+
+.hero { 
+    position: relative;  /*  Ojo aqui es relatice */
+    justify-content: center;
+    text-align: center;
+    min-height: 75vh;
+}
+
+.hero .section-content .background-image {
+    position: absolute; /*  Ojo aqui es absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: green
+}
+
+.section-content h1 {
+    font: normal 3.2rem "Open Sans", sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.section-content p {
+    font: normal 1rem "Open Sans", sans-serif;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+
+.destinations .grid li{
+    height: 25rem;
+    padding: 1.3rem;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.destinations .grid li.small {
+    flex-basis: 30%;
+}
+
+.destinations .grid li.large {
+    flex-basis: 70%;
 }
